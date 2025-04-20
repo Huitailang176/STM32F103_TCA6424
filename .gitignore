@@ -1,3 +1,4 @@
+stm32f103_tca6424/MDK-ARM/stm32f103_tca6424
 # Prerequisites
 *.d
 
@@ -6,12 +7,12 @@
 *.ko
 *.obj
 *.elf
-
+*.crf
 # Linker output
 *.ilk
 *.map
 *.exp
-
+*.axf
 # Precompiled Headers
 *.gch
 *.pch
