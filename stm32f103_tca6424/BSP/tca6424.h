@@ -43,86 +43,44 @@ extern "C" {
 #define TCA6424A_RA_CONFIG2         0x8E
 #endif
 
-#define TCA6424A_AUTO_INCREMENT     0x80
-
-#define TCA6424A_LOW                0
-#define TCA6424A_HIGH               1
-
-#define TCA6424A_POLARITY_NORMAL    0
-#define TCA6424A_POLARITY_INVERTED  1
-
-#define TCA6424A_OUTPUT             0
-#define TCA6424A_INPUT              1
-
 
 
 #define TCA6424_I2C_TIMEOUT 		1000
 
-typedef struct tca6424_key_s
+typedef struct tca6424_s
 {
-	uint8_t k1;
-    uint8_t k2;
-    uint8_t k3;
-    uint8_t k4;
-    uint8_t k5;
-    uint8_t k6;
-	uint8_t SYS;
-	uint8_t MDL;
-	uint8_t RTN;
-	uint8_t PAGE_L;
-	uint8_t PAGE_R;
-	uint8_t TELE;
-	uint8_t ENTER;
-}tca6424_key_t;
-extern tca6424_key_t Key;
+    uint8_t Port0;
+    uint8_t Port1;
+    uint8_t Port2;
+    uint8_t p00;
+    uint8_t p01;
+    uint8_t p02;
+    uint8_t p03;
+    uint8_t p04;
+    uint8_t p05;
+    uint8_t p06;
+    uint8_t p07;
+    uint8_t p10;
+    uint8_t p11;
+    uint8_t p12;
+    uint8_t p13;
+    uint8_t p14;
+    uint8_t p15;
+    uint8_t p16;
+    uint8_t p17;
+    uint8_t p20;
+    uint8_t p21;
+    uint8_t p22;
+    uint8_t p23;
+    uint8_t p24;
+    uint8_t p25;
+    uint8_t p26;
+    uint8_t p27;
 
-typedef struct tca6424_switch_s
-{
-	uint8_t SAL;
-    uint8_t SAH;
-    uint8_t SA;
-    uint8_t SBL;
-    uint8_t SBH;
-    uint8_t SB;
-    uint8_t SCL;
-    uint8_t SCH;
-    uint8_t SC;
-    uint8_t SDL;
-    uint8_t SDH;
-    uint8_t SD;
-	uint8_t SEL;
-    uint8_t SEH;
-    uint8_t SE;
-    uint8_t SFL;
-    uint8_t SFH;
-    uint8_t SF;
-	uint8_t SGL;
-    uint8_t SGH;
-    uint8_t SG;
-	uint8_t SHL;
-    uint8_t SHH;
-    uint8_t SH;
-	uint8_t SI;
-	uint8_t SJ;
-}tca6424_switch_t;
-extern tca6424_switch_t Switch;
+}tca6424_t;
+extern tca6424_t DeviceA;
+extern tca6424_t DeviceB;
 
-typedef struct tca6424_trim_s
-{
-    uint8_t T1_L; 
-    uint8_t T1_R; 
-    uint8_t T2_U; 
-    uint8_t T2_D; 
-    uint8_t T3_U; 
-    uint8_t T3_D; 
-    uint8_t T4_L; 
-    uint8_t T4_R; 
-	uint8_t T5_U; 
-    uint8_t T5_D; 
-    uint8_t T6_U; 
-    uint8_t T6_D; 
-} tca6424_trim_t;
-extern tca6424_trim_t Trim;
 
 
 void tca6424_init(void);

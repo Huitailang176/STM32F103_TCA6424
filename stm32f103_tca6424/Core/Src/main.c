@@ -24,8 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "tca6424.h"
-#include "mpu6050.h"   
+#include "tca6424.h" 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,9 +90,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_I2C1_Init();
-//  MPU6050_Init();
   tca6424_init();
-//  debug_tx1("id = %d \n",MPU6050_GetID());
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

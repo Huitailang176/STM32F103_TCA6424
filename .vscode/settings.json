@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "compare": "cpp",
+        "usart.h": "c",
+        "tca6424.h": "c",
+        "main.h": "c"
+    }
+}
